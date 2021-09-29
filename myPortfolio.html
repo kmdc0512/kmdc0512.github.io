@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <!--HEAD-->
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width-device-width"/>
+        <title>Karen Maltez</title>
+        <link rel="stylesheet" type="text/css" href="myPortfolio.css">
+    </head>
+
+    <!--BODY-->
+    <body class="Background">
+
+        <!--NAVBAR-->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <!--Adds space between the navbar and first heading-->
+        <br>
+        <br>
+
+        <!--Background Video-->
+        <div id="Home">
+            <br>
+            <br><!--Creates space from Navbar to video-->
+            <center><iframe width="560" height="315" src="https://www.youtube.com/embed/LBSwweZj4ok?&loop=1&playlist=LBSwweZj4ok;showinfo=0&autoplay=1&mute=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></center>
+        </div>
+
+        <!--Video Text-->
+        <div class="Video_text">
+            <h1 class="white-text">Karen's Portfolio</h1>
+            <strong>
+                <p class="center">
+                    <q>Computer programming is an art, because it applies accumulated knowledge to the world,
+                        <br>because it requires skill and ingenuity, and especially because it produces objects of beauty.
+                        <br>A programmer who subconsciously views himself as an artist will enjoy what he does and will do it better.
+                    </q>
+                    <br> -Donald Knuth
+                    <br>
+                    <br> My name is Karen Maltez. Welome to my portfolio website.
+                    <br>
+                    <br> Thank you for stopping by and enjoy!
+                </p>
+            </strong>
+        </div>
+
+        <!--About Section-->
+        <div class="Row" id="About">
+            <!--Left Column-->
+            <div class="Column_2">
+                <img src="./HTML_and_CSS/images/StockSnap_JCXQS3IVWD.jpg" alt="Desk and Computer">
+            </div>
+            <!--Right Column-->
+            <div classs="Column_1">
+                <h1>About</h1>
+                <p>
+                    I am a junior software developer looking to branch out into the Cyber Security field. I enjoy cooking, watching films, attending concerts and I love to travel!
+                    <br>
+                    <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Cyber Security Boot Camp, and also trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
+                    <br>
+                    <br>I am a junior cyber security analyst and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                </p>
+            </div>
+        </div>
+
+        <!--GitHub Section-->
+        <div class="Row" id="GitHub">
+            <!--Left Column-->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You can view my coding project on my GitHub profile here:
+                    <br>
+                    <p class="center"><a href="https://github.com/kmdc0512/HTML_and_CSS" target="_blank">The Tech Academy GitHub</a></p>
+                </p>
+            </div>
+            <!--Right Column-->
+            <div class="Column_2">
+                <a href="https://github.com/kmdc0512/HTML_and_CSS" target="_blank"><img src="./HTML_and_CSS/images/GitHub-Mark.png" alt="GitHub Logo"></a>
+            </div>
+        </div>
+
+        <!--Contact section-->
+        <div class="Row" id="Contact">
+            <!--Contact image, left column-->
+            <div class="Column_2 Column_tall">
+                <img src="./HTML_and_CSS/images/contact_1.jpg" alt="Contact_Image">
+            </div>
+            <!--Contact form, right column-->
+            <div class="Column_1 Column_tall">
+                <h1>Contact</h1>
+                <!--This specifies where and how to send the form data; we are leaving it blank-->
+                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+            </div>
+        </div>
+
+        <!--Footer section-->
+        <footer>
+            <p>
+                <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/" target="_blank">The Tech Academy</a></p>
+                <br>
+            </p>
+        </footer>
+    </body>
+</html>
