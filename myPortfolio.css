@@ -35,7 +35,7 @@ p {
     padding-right: 20px; /* Adds padding to the right of the paragraph element */
 }
 
-/* Paragraph element hover effect */
+/* paragraph element hover effect */
 p:hover {
     transition: transform 1s; /* This makes the transform effect last 1 second */
 	transform: scale(1.01); /* This makes the paragraphs increase slightly in size when hovered over */
