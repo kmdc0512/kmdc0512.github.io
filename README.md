@@ -5,7 +5,7 @@
         <h1>HTML and CSS Projects</h1>
             <br>
             <br>
-            <p>Below are samples of some of the projects I created using HTML and CSS.</p>
+            <p>Below are samples of some of the projects I created using HTML, CSS and JavaScript.</p>
             <br>
         <h2>Projects</h2>
             <ul>
