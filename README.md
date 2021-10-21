@@ -22,6 +22,7 @@
                     I utilized the navbar, jumbotron, cards, columns and dropdown components.</p>
         <h3>My Portfolio</h3>
             <p>This page is an example of my first portfolio. I stylized this page with CSS utilizing 
-                    elements such as hover and transform effects.</p>
+                    elements such as hover and transform effects. I also utilized a few JavaScript elements to make the page a bit more interactive.
+        </p>
     </body>
 </html>
