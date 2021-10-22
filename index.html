@@ -6,6 +6,7 @@
         <meta name="viewport" content="width-device-width"/>
         <title>Karen Maltez</title>
         <link rel="stylesheet" type="text/css" href="./myPortfolio.css">
+        <script src="myPortfolio.js" defer></script>
     </head>
 
     <!--BODY-->
@@ -14,9 +15,10 @@
         <!--NAVBAR-->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
-            <a href="#Contact">Contact</a>
+            <a onclick="openForm()" ondblclick="closeForm()">Contact</a>
         </div>
 
         <!--Adds space between the navbar and first heading-->
@@ -50,6 +52,59 @@
             </strong>
         </div>
 
+        <!-- slideshow section -->
+        <div id="Slideshow">
+            <div id="Slideshow_Background"> 
+                <div id="Slideshow_Container">
+                    <!-- slide 1 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./images/typing_desk.jpg" alt="Typing Desk">
+                        <div class="text">I'm available to assist you on your project!</div>
+                    </div>
+                    <!-- slide 2 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./images/animated_web.01.jpg" alt="Animated Web"> 
+                        <div class="text">I am a full-stack software developer, that loves to be creative<br>and think outside the box!</div>
+                    </div>
+                    <!-- slide 3 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./images/html_css.jpg" alt="HTML and CSS Logo">
+                        <div class="text">I'm skilled in HTML and CSS,</div>
+                    </div>
+                    <!-- slide 4 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./images/javaScript.jpg" alt="JavaScript">
+                        <div class="text">and can add JavaScript to your project. </div>
+                    </div>
+                    <!-- slide 5 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./images/startup.jpg" alt="Office Meetup"> 
+                        <div class="text">I love working with others and thrive in collaborative environments.</div>
+                    </div>
+                    <!-- slide 6 of 6 -->
+                    <div class="mySlides fade">
+                        <img class="Slideshow_Images" src="./images/contactme.jpg" alt="Contact Me"> 
+                        <div class="text"><a class="white-text" onclick="openForm()" href="#Contact">Contact me now!</a></div> 
+                    </div>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br> <!-- adds a space between the slideshow images and the dots -->
+
+                <!-- slideshow dots -these are another way for users to navigate through the slideshow- -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span> 
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                    <span class="dot" onclick="currentSlide(5)"></span> 
+                    <span class="dot" onclick="currentSlide(6)"></span> 
+                </div>
+            </div>
+        </div>
+
+
         <!--About Section-->
         <div class="Row" id="About">
             <!--Left Column-->
@@ -65,6 +120,7 @@
                     <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech Academy</a>'s Cyber Security Boot Camp, and also trained and experienced in the following web and programming languages: HTML, CSS, JavaScript, SQL, C# and more.
                     <br>
                     <br>I am a junior cyber security analyst and would love to work with you on your project. <a href="#Contact">Contact</a> me below!
+                    Also, check out my <a href="https://www.linkedin.com/in/karen-maltez-b349b0117/" target="_blank">LinkedIn!</a>
                 </p>
             </div>
         </div>
@@ -77,7 +133,7 @@
                 <p>
                     You can view my coding projects on my GitHub profile here:
                     <br>
-                    <p class="center"><a href="https://github.com/kmdc0512/HTML_and_CSS" target="_blank">The Tech Academy GitHub</a></p>
+                    <p class="center"><a href="https://github.com/kmdc0512/kmdc0512.github.io.git" target="_blank">The Tech Academy GitHub</a></p>
                 </p>
             </div>
             <!--Right Column-->
@@ -87,27 +143,26 @@
         </div>
 
         <!--Contact section-->
-        <div class="Row" id="Contact">
-            <!--Contact image, left column-->
-            <div class="Column_2 Column_tall">
-                <img src="./images/contact_1.jpg" alt="Contact_Image">
+        <div id="Contact">
+            <button onclick="openForm()" class="Pop_Up_Button">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                 <form action="https://formspree.io/info@learncodinganywhere.com" method="POST" class="form-container"> 
+                     <h1>Contact</h1>
+                     <label for="name"><b>Name</b></label>
+                       <input type="text" placeholder="Type your name here" name="name" required>
+                     <label for="phone"><b>Phone</b></label>
+                       <input type="text" placeholder="Type your phone number here" name="phone">
+                     <label for="email"><b>Email</b></label>		
+                       <input type="text" placeholder="Type your email address here" name="email" required>
+                     <label for="message"><b>Message</b></label>
+                       <input type="text" placeholder="Type your message here" name="message">
+          
+                     <button type="submit" class="btn">SUBMIT</button>
+                     <button type="button" class="btn cancel" onclick="closeForm()">CLOSE</button>
+                 </form>
             </div>
-            <!--Contact form, right column-->
-            <div class="Column_1 Column_tall">
-                <h1>Contact</h1>
-                <!--This specifies where and how to send the form data; we are leaving it blank-->
-                <form action="" method="POST"> <!-- Here we are utilizing a 3rd party service to submit the contact form data, insert your formspree endpoint in the action attribute -->
-                    <label>Name:</label>
-                        <input type="text" placeholder="Please enter your name here">
-                    <label>Email:</label>
-                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
-                    <label>Message:</label>
-                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
-                        <input type="submit" value="SUBMIT">
-                </form>
-            </div>
-        </div>
-
+         </div>
+         
         <!--Footer section-->
         <footer>
             <p>
