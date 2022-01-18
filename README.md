@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
     <body>
-            <p>This is my personal portfolio page. It contains a brief description of myself and my interests. </p>
+            <p>This is my personal portfolio page. It contains a brief description of my progress and my interests. </p>
         <h3>Slideshow</h3>
             <p>A slideshow I created using CSS and Javascript.</p>
         <h3>Home</h3>
